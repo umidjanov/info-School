@@ -139,6 +139,25 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .feature-card:hover {
+                transform: translateY(-5px);
+            }
+        }
     </style>
 </head>
 
@@ -258,7 +277,7 @@
                 <!-- Image -->
                 <div class="relative float-animation order-1 md:order-2">
                     <div class="absolute inset-0 gradient-bg opacity-20 blur-3xl rounded-full"></div>
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" alt="Students"
+                    <img src="https://images.unsplash.com/photo-1472289065668-ce650ac443d2?w=800&q=80" alt="Students"
                         class="rounded-2xl md:rounded-3xl shadow-2xl relative z-10 w-full h-auto">
                 </div>
             </div>
@@ -344,35 +363,41 @@
     </section>
 
     <!-- Features Section -->
-    <section id="features" class="py-20 px-4 gradient-bg">
+    <section id="features" class="py-16 md:py-20 px-4 gradient-bg">
         <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-bold text-white mb-4">
+            <div class="text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
                     Nima uchun biz?
                 </h2>
-                <p class="text-xl text-white opacity-90">Bizning afzalliklarimiz</p>
+                <p class="text-lg md:text-xl text-white">Bizning afzalliklarimiz</p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+                <!-- Card 1 -->
                 <div
-                    class="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20">
-                    <div class="text-5xl mb-4">🎓</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Professional o'qituvchilar</h3>
-                    <p class="text-white opacity-90">Tajribali va malakali o'qituvchilar jamoasi</p>
+                    class="text-gray-900 feature-card bg-white bg-opacity-20 backdrop-blur-lg rounded-2xl md:rounded-3xl p-6 md:p-8 border-2 border-white border-opacity-30 shadow-xl">
+                    <div class="text-5xl md:text-6xl mb-4">🎓</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3">Professional o'qituvchilar</h3>
+                    <p class="text-sm md:text-base leading-relaxed">Tajribali va malakali o'qituvchilar
+                        jamoasi</p>
                 </div>
 
+                <!-- Card 2 -->
                 <div
-                    class="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20">
-                    <div class="text-5xl mb-4">💻</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Zamonaviy texnologiyalar</h3>
-                    <p class="text-white opacity-90">Eng so'nggi dasturiy ta'minot va uskunalar</p>
+                    class="text-gray-900 feature-card bg-white bg-opacity-20 backdrop-blur-lg rounded-2xl md:rounded-3xl p-6 md:p-8 border-2 border-white border-opacity-30 shadow-xl">
+                    <div class="text-5xl md:text-6xl mb-4">💻</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3">Zamonaviy texnologiyalar</h3>
+                    <p class="text-sm md:text-base leading-relaxed">Eng so'nggi dasturiy ta'minot va
+                        uskunalar</p>
                 </div>
 
+                <!-- Card 3 -->
                 <div
-                    class="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20">
-                    <div class="text-5xl mb-4">🏆</div>
-                    <h3 class="text-2xl font-bold text-white mb-3">Sertifikatlar</h3>
-                    <p class="text-white opacity-90">Xalqaro standartlarga mos sertifikatlar</p>
+                    class="text-gray-900 feature-card bg-white bg-opacity-20 backdrop-blur-lg rounded-2xl md:rounded-3xl p-6 md:p-8 border-2 border-white border-opacity-30 shadow-xl">
+                    <div class="text-5xl md:text-6xl mb-4">🏆</div>
+                    <h3 class="text-xl md:text-2xl font-bold mb-3">Sertifikatlar</h3>
+                    <p class="text-sm md:text-base leading-relaxed">Xalqaro standartlarga mos sertifikatlar
+                    </p>
                 </div>
             </div>
         </div>
