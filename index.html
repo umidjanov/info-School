@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>International School - Kelajagingizni Bugun Boshlang</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(102, 126, 234, 0.4);
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .glow {
+            box-shadow: 0 0 30px rgba(102, 126, 234, 0.6);
+        }
+
+        .parallax {
+            transition: transform 0.3s ease-out;
+        }
+
+        .hero-pattern {
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-2">
+                    <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center glow">
+                        <span class="text-white text-2xl font-bold">IS</span>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">International School</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#courses" class="text-gray-700 hover:text-purple-600 transition font-medium">Kurslar</a>
+                    <a href="#features"
+                        class="text-gray-700 hover:text-purple-600 transition font-medium">Afzalliklar</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition font-medium">Bog'lanish</a>
+                </div>
+                <a href="#contact">
+                    <button
+                        class="gradient-bg text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition glow">
+                        Ro'yxatdan o'tish
+                    </button>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 hero-pattern overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                        Kelajagingizni
+                        <span class="gradient-text">Bugun</span>
+                        Boshlang
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Zamonaviy ta'lim usullari va professional o'qituvchilar bilan bilimingizni yangi bosqichga olib
+                        chiqing
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button
+                            class="gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition glow">
+                            Bepul dars olish
+                        </button>
+                        <button
+                            class="bg-white text-purple-600 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transition border-2 border-purple-600">
+                            Video ko'rish
+                        </button>
+                    </div>
+                    <div class="mt-12 flex items-center space-x-8">
+                        <div>
+                            <div class="text-4xl font-bold gradient-text">5000+</div>
+                            <div class="text-gray-600">O'quvchilar</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold gradient-text">50+</div>
+                            <div class="text-gray-600">O'qituvchilar</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold gradient-text">98%</div>
+                            <div class="text-gray-600">Mamnunlik</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative float-animation">
+                    <div class="absolute inset-0 gradient-bg opacity-20 blur-3xl rounded-full"></div>
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80" alt="Students"
+                        class="rounded-3xl shadow-2xl relative z-10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-gray-900 mb-4">
+                    Bizning <span class="gradient-text">Kurslarimiz</span>
+                </h2>
+                <p class="text-xl text-gray-600">Zamonaviy kasblarni professional o'rganing</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- English Course -->
+                <div class="card-hover bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 cursor-pointer">
+                    <div class="w-16 h-16 bg-blue-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Ingliz tili</h3>
+                    <p class="text-gray-600 mb-6">IELTS, CEFR standartlari bo'yicha professional o'rgatish</p>
+                    <div class="flex items-center text-blue-600 font-semibold">
+                        Batafsil <span class="ml-2">→</span>
+                    </div>
+                </div>
+
+                <!-- Programming Course -->
+                <div class="card-hover bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-8 cursor-pointer">
+                    <div class="w-16 h-16 bg-purple-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Dasturlash</h3>
+                    <p class="text-gray-600 mb-6">Python, JavaScript, Web Development asoslaridan murakkab
+                        loyihalargacha</p>
+                    <div class="flex items-center text-purple-600 font-semibold">
+                        Batafsil <span class="ml-2">→</span>
+                    </div>
+                </div>
+
+                <!-- Math Course -->
+                <div class="card-hover bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 cursor-pointer">
+                    <div class="w-16 h-16 bg-green-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Matematika</h3>
+                    <p class="text-gray-600 mb-6">Olimpiada, SAT va maktab dasturi bo'yicha chuqur bilim</p>
+                    <div class="flex items-center text-green-600 font-semibold">
+                        Batafsil <span class="ml-2">→</span>
+                    </div>
+                </div>
+
+                <!-- 3D Design Course -->
+                <div class="card-hover bg-gradient-to-br from-pink-50 to-pink-100 rounded-3xl p-8 cursor-pointer">
+                    <div class="w-16 h-16 bg-pink-500 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3">3D Design</h3>
+                    <p class="text-gray-600 mb-6">Blender, 3ds Max yordamida professional 3D modellashtirish</p>
+                    <div class="flex items-center text-pink-600 font-semibold">
+                        Batafsil <span class="ml-2">→</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4 gradient-bg">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl font-bold text-white mb-4">
+                    Nima uchun biz?
+                </h2>
+                <p class="text-xl text-white opacity-90">Bizning afzalliklarimiz</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20">
+                    <div class="text-5xl mb-4">🎓</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Professional o'qituvchilar</h3>
+                    <p class="text-white opacity-90">Tajribali va malakali o'qituvchilar jamoasi</p>
+                </div>
+
+                <div
+                    class="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20">
+                    <div class="text-5xl mb-4">💻</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Zamonaviy texnologiyalar</h3>
+                    <p class="text-white opacity-90">Eng so'nggi dasturiy ta'minot va uskunalar</p>
+                </div>
+
+                <div
+                    class="bg-white bg-opacity-10 backdrop-blur-lg rounded-3xl p-8 border border-white border-opacity-20">
+                    <div class="text-5xl mb-4">🏆</div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Sertifikatlar</h3>
+                    <p class="text-white opacity-90">Xalqaro standartlarga mos sertifikatlar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-bold text-gray-900 mb-6">
+                Bugun <span class="gradient-text">o'qishni boshlang!</span>
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+                Birinchi darsni bepul sinab ko'ring
+            </p>
+            <form class="max-w-md mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input type="text" placeholder="Ismingiz"
+                        class="flex-1 px-6 py-4 rounded-full border-2 border-gray-200 focus:border-purple-500 focus:outline-none">
+                    <input type="tel" placeholder="Telefon raqamingiz"
+                        class="flex-1 px-6 py-4 rounded-full border-2 border-gray-200 focus:border-purple-500 focus:outline-none">
+                </div>
+                <button type="submit"
+                    class="w-full mt-4 gradient-bg text-white px-8 py-4 rounded-full font-semibold text-lg hover:scale-105 transition glow">
+                    Bepul darsga yozilish
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold">IS</span>
+                    </div>
+                    <span class="text-xl font-bold">International School</span>
+                </div>
+                <p class="text-gray-400">Kelajagingizni biz bilan quring</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Kurslar</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li class="cursor-pointer">Ingliz tili</li>
+                    <li class="cursor-pointer">Dasturlash</li>
+                    <li class="cursor-pointer">Matematika</li>
+                    <li class="cursor-pointer">3D Design</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Kompaniya</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li class="cursor-pointer">Biz haqimizda</li>
+                    <li class="cursor-pointer">O'qituvchilar</li>
+                    <li class="cursor-pointer">Aloqa</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4">Bog'lanish</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li class="cursor-pointer">📞 +998 90 123 45 67</li>
+                    <li class="cursor-pointer">📧 info@intschool.uz</li>
+                    <li class="cursor-pointer">📍 Toshkent, O'zbekiston</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-gray-400">
+            <p>&copy; 2024 International School. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Parallax effect on mouse move
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.card-hover');
+            const mouseX = e.clientX / window.innerWidth;
+            const mouseY = e.clientY / window.innerHeight;
+
+            cards.forEach((card, index) => {
+                const speed = (index + 1) * 2;
+                const x = (mouseX - 0.5) * speed;
+                const y = (mouseY - 0.5) * speed;
+                card.style.transform = `translate(${x}px, ${y}px)`;
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.card-hover').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Form submission
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Rahmat! Tez orada siz bilan bog\'lanamiz.');
+        });
+    </script>
+</body>
+
+</html>
