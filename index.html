@@ -211,24 +211,7 @@
         </div>
     </nav>
 
-    <script>
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
 
-        menuBtn.addEventListener('click', () => {
-            menuBtn.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
-
-        // Close menu when clicking on a link
-        const menuLinks = mobileMenu.querySelectorAll('a');
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menuBtn.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            });
-        });
-    </script>
 
     <!-- Hero Section -->
     <section class="pt-[95px] md:pt-32 pb-12 md:pb-20 px-4 hero-pattern overflow-hidden">
@@ -511,6 +494,24 @@
             e.preventDefault();
             alert('Rahmat! Tez orada siz bilan bog\'lanamiz.');
         });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            menuBtn.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuBtn.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
     </script>
 </body>
 
