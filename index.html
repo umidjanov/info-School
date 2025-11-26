@@ -178,7 +178,7 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="#courses" data-i18n="courses"
+                    <a href="#courses" data-i18n="kurs"
                         class="text-gray-700 hover:text-purple-600 transition font-medium">Kurslar</a>
                     <a href="#features" data-i18n="features"
                         class="text-gray-700 hover:text-purple-600 transition font-medium">Afzalliklar</a>
@@ -219,7 +219,7 @@
             <!-- Mobile Menu -->
             <div class="mobile-menu md:hidden" id="mobileMenu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="#courses" data-i18n="courses"
+                    <a href="#courses" data-i18n="kurs"
                         class="block px-3 py-2 rounded-md text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition font-medium">
                         Kurslar
                     </a>
@@ -253,10 +253,10 @@
                     <h1
                         class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-4 md:mb-6 leading-tight">
                         Kelajagingizni
-                        <span class="gradient-text">Bugun</span>
+                        <span class="gradient-text" data-i18n="kelajak2">Bugun</span>
                         Boshlang
                     </h1>
-                    <p class="text-lg sm:text-xl text-gray-600 mb-6 md:mb-8">
+                    <p class="text-lg sm:text-xl text-gray-600 mb-6 md:mb-8" data-i18n="desc">
                         Zamonaviy ta'lim usullari va professional o'qituvchilar bilan bilimingizni yangi bosqichga olib
                         chiqing
                     </p>
@@ -303,7 +303,7 @@
                 <h2 class="text-5xl font-bold text-gray-900 mb-4">
                     Bizning <span class="gradient-text">Kurslarimiz</span>
                 </h2>
-                <p class="text-xl text-gray-600">Zamonaviy kasblarni professional o'rganing</p>
+                <p class="text-xl text-gray-600" data-i18n="subtitle">Zamonaviy kansblarni professional o'rganing</p>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -316,9 +316,10 @@
                             </path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Ingliz tili</h3>
-                    <p class="text-gray-600 mb-6">IELTS, CEFR standartlari bo'yicha professional o'rgatish</p>
-                    <div class="flex items-center text-blue-600 font-semibold">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3" data-i18n="eng">Ingliz tili</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="engDesc">IELTS, CEFR standartlari bo'yicha professional
+                        o'rgatish</p>
+                    <div class="flex items-center text-blue-600 font-semibold" data-i18n="more">
                         Batafsil <span class="ml-2">→</span>
                     </div>
                 </div>
@@ -331,10 +332,11 @@
                                 d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Dasturlash</h3>
-                    <p class="text-gray-600 mb-6">Python, JavaScript, Web Development asoslaridan murakkab
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3" data-i18n="it">Dasturlash</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="itDesc">Python, JavaScript, Web Development asoslaridan
+                        murakkab
                         loyihalargacha</p>
-                    <div class="flex items-center text-purple-600 font-semibold">
+                    <div class="flex items-center text-purple-600 font-semibold" data-i18n="more">
                         Batafsil <span class="ml-2">→</span>
                     </div>
                 </div>
@@ -348,9 +350,10 @@
                             </path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">Matematika</h3>
-                    <p class="text-gray-600 mb-6">Olimpiada, SAT va maktab dasturi bo'yicha chuqur bilim</p>
-                    <div class="flex items-center text-green-600 font-semibold">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3" data-i18n="math">Matematika</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="mathDesc">Olimpiada, SAT va maktab dasturi bo'yicha chuqur
+                        bilim</p>
+                    <div class="flex items-center text-green-600 font-semibold" data-i18n="more">
                         Batafsil <span class="ml-2">→</span>
                     </div>
                 </div>
@@ -364,9 +367,10 @@
                             </path>
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-3">3D Design</h3>
-                    <p class="text-gray-600 mb-6">Blender, 3ds Max yordamida professional 3D modellashtirish</p>
-                    <div class="flex items-center text-pink-600 font-semibold">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-3" data-i18n="design">3D Design</h3>
+                    <p class="text-gray-600 mb-6" data-i18n="designDesc">Blender, 3ds Max yordamida professional 3D
+                        modellashtirish</p>
+                    <div class="flex items-center text-pink-600 font-semibold" data-i18n="more">
                         Batafsil <span class="ml-2">→</span>
                     </div>
                 </div>
@@ -579,7 +583,7 @@
         ======================= */
         const translations = {
             uz: {
-                courses: "Kurslar",
+                kurs: "Kurslar",
                 features: "Afzalliklar",
                 contact: "Bog'lanish",
                 register: "Ro'yxatdan o'tish",
@@ -587,10 +591,23 @@
                 watchVideo: "Video ko'rish",
                 students: "O'quvchilar",
                 teachers: "O'qituvchilar",
-                satisfaction: "Mamnunlik"
+                satisfaction: "Mamnunlik",
+                desc: "Zamonaviy ta'lim usullari va professional o'qituvchilar bilan bilimingizni yangi bosqichga olib chiqing",
+                title: "Bizning Kurslarimiz",
+                subtitle: "Zamonaviy kasblarni professional o'rganing",
+                more: "Batafsil",
+
+                eng: "Ingliz tili",
+                engDesc: "IELTS, CEFR standartlari bo'yicha professional o'rgatish",
+                it: "Dasturlash",
+                itDesc: "Python, JavaScript, Web Development asoslaridan murakkab loyihalargacha",
+                math: "Matematika",
+                mathDesc: "Olimpiada, SAT va maktab dasturi bo'yicha chuqur bilim",
+                design: "3D Design",
+                designDesc: "Blender, 3ds Max yordamida professional 3D modellashtirish",
             },
             ru: {
-                courses: "Курсы",
+                kurs: "Курсы",
                 features: "Преимущества",
                 contact: "Контакт",
                 register: "Регистрация",
@@ -598,7 +615,20 @@
                 watchVideo: "Смотреть видео",
                 students: "Ученики",
                 teachers: "Преподаватели",
-                satisfaction: "Удовлетворенность"
+                satisfaction: "Удовлетворенность",
+                desc: "Современные методы обучения и профессиональные преподаватели поднимут ваши знания на новый уровень.",
+                title: "Наши Курсы",
+                subtitle: "Изучайте современные профессии профессионально",
+                more: "Подробнее",
+
+                eng: "Английский язык",
+                engDesc: "Профессиональное обучение по стандартам IELTS и CEFR",
+                it: "Программирование",
+                itDesc: "От основ Python, JavaScript и Web-разработки до сложных проектов",
+                math: "Математика",
+                mathDesc: "Глубокие знания по олимпиадам, SAT и школьной программе",
+                design: "3D Дизайн",
+                designDesc: "Профессиональное 3D моделирование на Blender и 3ds Max",
             }
         };
 
