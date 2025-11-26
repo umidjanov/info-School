@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="uz" class="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -178,16 +178,30 @@
 
                 <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8">
-                    <a href="#courses" class="text-gray-700 hover:text-purple-600 transition font-medium">Kurslar</a>
-                    <a href="#features"
+                    <a href="#courses" data-i18n="courses"
+                        class="text-gray-700 hover:text-purple-600 transition font-medium">Kurslar</a>
+                    <a href="#features" data-i18n="features"
                         class="text-gray-700 hover:text-purple-600 transition font-medium">Afzalliklar</a>
-                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition font-medium">Bog'lanish</a>
+                    <a href="#contact" data-i18n="contact"
+                        class="text-gray-700 hover:text-purple-600 transition font-medium">Bog'lanish</a>
                 </div>
+
+                <!-- Language + Dark Mode -->
+                <div class="md:flex items-center space-x-4">
+
+                    <!-- Language -->
+                    <button class="lang-btn px-3 py-1 rounded-md bg-gray-200 cursor-pointer" data-lang="uz">UZ</button>
+                    <button class="lang-btn px-3 py-1 rounded-md bg-gray-200 cursor-pointer" data-lang="ru">RU</button>
+
+                    <!-- Dark Mode -->
+                    <!-- <button id="themeToggle" class="text-2xl">🌙</button> -->
+                </div>
+
 
                 <!-- Desktop Button -->
                 <div class="hidden md:block">
                     <a href="#contact">
-                        <button
+                        <button data-i18n="contact"
                             class="gradient-bg text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition glow">
                             Ro'yxatdan o'tish
                         </button>
@@ -205,15 +219,15 @@
             <!-- Mobile Menu -->
             <div class="mobile-menu md:hidden" id="mobileMenu">
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="#courses"
+                    <a href="#courses" data-i18n="courses"
                         class="block px-3 py-2 rounded-md text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition font-medium">
                         Kurslar
                     </a>
-                    <a href="#features"
+                    <a href="#features" data-i18n="features"
                         class="block px-3 py-2 rounded-md text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition font-medium">
                         Afzalliklar
                     </a>
-                    <a href="#contact"
+                    <a href="#contact" data-i18n="contact"
                         class="block px-3 py-2 rounded-md text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition font-medium">
                         Bog'lanish
                     </a>
@@ -229,8 +243,6 @@
             </div>
         </div>
     </nav>
-
-
 
     <!-- Hero Section -->
     <section class="pt-[95px] md:pt-32 pb-12 md:pb-20 px-4 hero-pattern overflow-hidden">
@@ -249,27 +261,27 @@
                         chiqing
                     </p>
                     <div class="flex flex-col sm:flex-row gap-3 md:gap-4">
-                        <button
+                        <button data-i18n="freeLesson"
                             class="gradient-bg text-white px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg hover:scale-105 transition glow w-full sm:w-auto">
                             Bepul dars olish
                         </button>
-                        <button
+                        <button data-i18n="watchVideo"
                             class="bg-white text-purple-600 px-6 md:px-8 py-3 md:py-4 rounded-full font-semibold text-base md:text-lg hover:bg-gray-50 transition border-2 border-purple-600 w-full sm:w-auto">
                             Video ko'rish
                         </button>
                     </div>
                     <div class="mt-8 md:mt-12 grid grid-cols-3 gap-4 md:gap-8">
                         <div class="text-center md:text-left">
-                            <div class="text-3xl md:text-4xl font-bold gradient-text">5000+</div>
-                            <div class="text-sm md:text-base text-gray-600">O'quvchilar</div>
+                            <div class="text-3xl md:text-4xl font-bold gradient-text">3500+</div>
+                            <div class="text-sm md:text-base text-gray-600" data-i18n="students">O'quvchilar</div>
                         </div>
                         <div class="text-center md:text-left">
-                            <div class="text-3xl md:text-4xl font-bold gradient-text">50+</div>
-                            <div class="text-sm md:text-base text-gray-600">O'qituvchilar</div>
+                            <div class="text-3xl md:text-4xl font-bold gradient-text">60+</div>
+                            <div class="text-sm md:text-base text-gray-600" data-i18n="teachers">O'qituvchilar</div>
                         </div>
                         <div class="text-center md:text-left">
                             <div class="text-3xl md:text-4xl font-bold gradient-text">98%</div>
-                            <div class="text-sm md:text-base text-gray-600">Mamnunlik</div>
+                            <div class="text-sm md:text-base text-gray-600" data-i18n="satisfaction">Mamnunlik</div>
                         </div>
                     </div>
                 </div>
@@ -561,6 +573,54 @@
                 mobileMenu.classList.remove('active');
             });
         });
+
+        /* =======================
+                 I18N
+        ======================= */
+        const translations = {
+            uz: {
+                courses: "Kurslar",
+                features: "Afzalliklar",
+                contact: "Bog'lanish",
+                register: "Ro'yxatdan o'tish",
+                freeLesson: "Bepul dars olish",
+                watchVideo: "Video ko'rish",
+                students: "O'quvchilar",
+                teachers: "O'qituvchilar",
+                satisfaction: "Mamnunlik"
+            },
+            ru: {
+                courses: "Курсы",
+                features: "Преимущества",
+                contact: "Контакт",
+                register: "Регистрация",
+                freeLesson: "Получить бесплатный урок",
+                watchVideo: "Смотреть видео",
+                students: "Ученики",
+                teachers: "Преподаватели",
+                satisfaction: "Удовлетворенность"
+            }
+        };
+
+        const langBtns = document.querySelectorAll(".lang-btn");
+
+        langBtns.forEach(btn => {
+            btn.addEventListener("click", () => {
+                const lang = btn.dataset.lang;
+                localStorage.setItem("lang", lang);
+                applyTranslations(lang);
+            });
+        });
+
+        function applyTranslations(lang) {
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.dataset.i18n;
+                el.textContent = translations[lang][key];
+            });
+        }
+
+        applyTranslations(localStorage.getItem("lang") || "uz");
+
 
     </script>
 </body>
